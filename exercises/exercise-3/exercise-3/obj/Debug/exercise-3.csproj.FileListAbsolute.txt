@@ -1,0 +1,5 @@
+C:\Users\mgechev\Documents\Visual Studio 2008\Projects\exercise-3\exercise-3\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mgechev\Documents\Visual Studio 2008\Projects\exercise-3\exercise-3\bin\Debug\exercise-3.exe
+C:\Users\mgechev\Documents\Visual Studio 2008\Projects\exercise-3\exercise-3\bin\Debug\exercise-3.pdb
+C:\Users\mgechev\Documents\Visual Studio 2008\Projects\exercise-3\exercise-3\obj\Debug\exercise-3.exe
+C:\Users\mgechev\Documents\Visual Studio 2008\Projects\exercise-3\exercise-3\obj\Debug\exercise-3.pdb
