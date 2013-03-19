@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Security.Cryptography;
+using Model;
 
 /// <summary>
 /// Contains the current data source.
@@ -36,8 +37,8 @@ public class RepositoryFactory
         var repo = new DummyRepository<User>(data);
         var repo2 = new MSSQLDataProvider<User>();
 
-        this.options.Add("UsersRepository", repo);
-        //       this.options.Add("UsersRepository", repo2);
+        //this.options.Add("UsersRepository", repo);
+        this.options.Add("UsersRepository", repo2);
 	}
 
     public static RepositoryFactory GetFactory()

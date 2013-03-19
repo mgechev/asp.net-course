@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Web;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using Model;
 
 /// <summary>
 /// This repository contains also some logic of Unit of Work which
@@ -31,14 +32,14 @@ public class MSSQLDataProvider<T> : IRepository<T> where T : class
     public void Add(T entity)
     {
         this.data.Add(entity);
-        this.entities.SaveChanges();
+        //this.entities.SaveChanges();
     }
 
     [MethodImpl(MethodImplOptions.Synchronized)]
     public void Delete(T entity)
     {
         this.data.Remove(entity);
-        this.entities.SaveChanges();
+        //this.entities.SaveChanges();
     }
 
     #endregion

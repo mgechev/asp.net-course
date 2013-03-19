@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Net.Mail;
 using System.Security.Cryptography;
+using Model;
 
 public class RegisterPresenter
 {
