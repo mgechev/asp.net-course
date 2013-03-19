@@ -14,14 +14,28 @@ public partial class UsersList : System.Web.UI.Page, IUsersListView
         UsersListPresenter presenter = new UsersListPresenter(this);
     }
 
+
     #region IUsersListView Members
 
     public IEnumerable<User> Users
     {
-        set 
+        set
         {
             this.UsersListGrid.DataSource = value;
             this.UsersListGrid.DataBind();
+        }
+    }
+
+    public void SetGridVisibility(bool visible)
+    {
+        this.UsersListGrid.Visible = visible;
+    }
+
+    public string ErrorMessage
+    {
+        set 
+        { 
+            this.ErrorMessageLabel.InnerText = value;
         }
     }
 

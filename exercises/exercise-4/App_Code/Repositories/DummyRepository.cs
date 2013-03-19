@@ -6,7 +6,6 @@ using System.Runtime.CompilerServices;
 
 public class DummyRepository<T> : IRepository<T> where T : class
 {
-
     public List<T> data;
 
     public DummyRepository(List<T> data)

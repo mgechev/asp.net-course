@@ -11,7 +11,7 @@ public partial class Login : System.Web.UI.Page, ILoginView
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        this.presenter = new LoginPresenter(this);
+        this.presenter = new LoginPresenter(this, Response);
     }
 
     #region ILoginView Members

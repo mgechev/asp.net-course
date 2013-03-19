@@ -5,6 +5,7 @@
 </asp:Content>
 
 <asp:Content runat="server" ContentPlaceHolderID="ContentPlaceHolder">
+    <div runat="server" style="height: 50px" id="ErrorMessageLabel" class="text-error"></div>
     <asp:DataGrid runat="server" ID="UsersListGrid" CssClass="table table-striped" AutoGenerateColumns="false">
         <ItemStyle BorderWidth="0" />
         <Columns>

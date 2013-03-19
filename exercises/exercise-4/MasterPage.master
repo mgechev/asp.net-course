@@ -12,10 +12,12 @@
     <div class="navbar">
         <div class="navbar-inner">
             <ul class="nav">
-                <li><a href="./">Начало</a></li>
-                <li><a href="./Login.aspx">Логин</a></li>
-                <li><a href="./Register.aspx">Регистрация</a></li>
-                <li><a href="./UsersList.aspx">Всички потребители</a></li>
+                <li><h4 runat="server" id="GreetingsItem"></h4></li>
+                <li runat="server" id="HomeMenuItem"><a href="./">Начало</a></li>
+                <li runat="server" id="LoginMenuItem"><a href="./Login.aspx">Логин</a></li>
+                <li runat="server" id="RegisterMenuItem"><a href="./Register.aspx">Регистрация</a></li>
+                <li runat="server" id="UsersListMenuItem"><a href="./UsersList.aspx">Всички потребители</a></li>
+                <li runat="server" id="LogoutMenuItem"><a href="./Logout.aspx">Изход</a></li>
             </ul>
         </div>
     </div>

@@ -12,7 +12,6 @@ using System.Security.Cryptography;
 /// </summary>
 public class RepositoryFactory
 {
-
     private static RepositoryFactory INSTANCE;
     private Dictionary<string, object> options;
 

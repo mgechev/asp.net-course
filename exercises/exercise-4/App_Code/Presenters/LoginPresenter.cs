@@ -7,12 +7,19 @@ public class LoginPresenter
 {
     private ILoginView view;
     private IRepository<User> repository;
+    private HttpResponse response;
 
-	public LoginPresenter(ILoginView view)
+	public LoginPresenter(ILoginView view, HttpResponse response)
 	{
         this.repository = RepositoryFactory.GetFactory().GetUsersRepository();
+        this.response = response;
         this.view = view;
         this.view.LoginButton.ServerClick += LoginButton_Click;
+        if (Authentication.IsAuthenticated())
+        {
+            this.view.SetFormVisibility(false);
+            this.view.SetResponse("Вече сте в акаунта си", false);
+        }
 	}
 
     private void LoginButton_Click(object sender, EventArgs e)
@@ -20,8 +27,8 @@ public class LoginPresenter
 
         if (IsLoginSuccessfull())
         {
-            view.SetResponse("Успешно влезнахте в акаунта си!", false);
-            view.SetFormVisibility(false);
+            Authentication.Authenticate(this.view.Username);
+            this.response.Redirect("./");
         }
         else
         {

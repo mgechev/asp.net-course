@@ -9,4 +9,12 @@ public interface IUsersListView
     {
         set;
     }
+
+    void SetGridVisibility(bool visible);
+
+    string ErrorMessage
+    {
+        set;
+    }
+
 }
