@@ -9,7 +9,7 @@ using Model;
 /// This repository contains also some logic of Unit of Work which
 /// implementation is not included because of simplicity.
 /// </summary>
-public class MSSQLDataProvider<T> : IRepository<T> where T : class
+public sealed class MSSQLDataProvider<T> : IRepository<T> where T : class
 {
     private System.Data.Entity.DbSet<T> data;
     private SampleEntities entities;
